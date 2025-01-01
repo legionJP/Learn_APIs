@@ -7,10 +7,11 @@
 - A GET call doesn’t need a payload. However, GET calls can be accompanied by query string parameters and their values to filter the API output.
 ```
 
-#POST
+# POST
 /api/menu-items
 /api/orders
-```diff
+
+``` diff
 Here’s a sample JSON payload for the /api/menu-items endpoint to create a new resource:
 {
   "title":"Beef Steak",
