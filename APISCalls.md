@@ -83,7 +83,6 @@ Sending appropriate status codes with every API response is essential. Every sta
 
  While making an API call, the client can specify its desired response format with the Accept HTTP header. And that header should be considered to deliver the result in that format using the render classes. Here’s a list of HTTP headers for different response types.  
 
-|---------------|----------------------------------|
 | Response Type | Request Header                   |
 |---------------|----------------------------------|
 | HTML          | Accept: text/html                |
