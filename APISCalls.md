@@ -92,7 +92,6 @@ Sending appropriate status codes with every API response is essential. Every sta
 | YAML          | Accept: application/yaml         |
 |               | Accept: application/x-yaml       |
 |               | Accept: text/yaml                |
-|---------------|----------------------------------|
 
 
 
