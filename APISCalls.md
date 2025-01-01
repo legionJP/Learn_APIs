@@ -1,11 +1,10 @@
 # Examples of APIs calls
 
-
-
 ## GET 
 
 ``` diff
  A GET call doesn’t need a payload. However, GET calls can be accompanied by query string parameters and their values to filter the API output.
+
 ```
 
 ## POST
@@ -19,6 +18,7 @@ Here’s a sample JSON payload for the /api/menu-items endpoint to create a new 
   "price": 5.50,
   "category":"main",
 }
+
 ```
 ## PUT
 
@@ -27,16 +27,19 @@ Here’s a sample JSON payload for the /api/menu-items endpoint to create a new 
 ```
 
 ## PATCH
+
 ``` diff
 Here’s a sample JSON payload for this endpoint /api/menu-items/1 to partially update this resource
 {
    "price": 3.00
 }
+
 ```
 ## DELETE
 
 ``` diff
-When the DELETE call is sent to a collection endpoint, like /api/menu-items the API developer should delete the entire collection. When it is sent to a particular resource, like this, /api/menu-items/1, then the API developer should delete only that resource.  
+When the DELETE call is sent to a collection endpoint, like /api/menu-items the API developer should delete the entire collection. When it is sent to a particular resource, like this, /api/menu-items/1, then the API developer should delete only that resource. 
+
 ```
 
 
