@@ -2,12 +2,13 @@
 
 
 
-# GET
-```
-- A GET call doesn’t need a payload. However, GET calls can be accompanied by query string parameters and their values to filter the API output.
+## GET 
+
+``` diff
+ A GET call doesn’t need a payload. However, GET calls can be accompanied by query string parameters and their values to filter the API output.
 ```
 
-# POST
+## POST
 /api/menu-items
 /api/orders
 
@@ -19,22 +20,26 @@ Here’s a sample JSON payload for the /api/menu-items endpoint to create a new 
   "category":"main",
 }
 ```
-# PUT
-```
-- Here's a sample JSON payload for this endpoint /api/menu-items/1 to completely replace it. Note that you need to supply all data for a PUT request.
+## PUT
+
+``` diff
+ Here's a sample JSON payload for this endpoint /api/menu-items/1 to completely replace it. Note that you need to supply all data for a PUT request.
 ```
 
-# PATCH
-```
+## PATCH
+``` diff
 Here’s a sample JSON payload for this endpoint /api/menu-items/1 to partially update this resource
 {
    "price": 3.00
 }
 ```
-# DELETE
-```
+## DELETE
+
+``` diff
 When the DELETE call is sent to a collection endpoint, like /api/menu-items the API developer should delete the entire collection. When it is sent to a particular resource, like this, /api/menu-items/1, then the API developer should delete only that resource.  
 ```
+
+
 | HTTP Method | Sample Endpoints                                | Query String / Payload                                                                                                                                                    |
 |-------------|--------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **GET**     | /api/menu-items                                  | A GET call doesn’t need a payload. However, GET calls can be accompanied by query string parameters and their values to filter the API output.                             |
