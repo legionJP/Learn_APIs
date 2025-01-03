@@ -15,3 +15,5 @@ Application Programming Interface
 [ REST API and RESTfulness ](Learn_APIs/Learn%20APIs/RESTfullness.md)
 
 [ Insomnia API Tool Guide ](Learn_APIs/Learn%20APIs/Insomnia_guide.md)
+
+[ Security and Authentication in REST API](Learn_APIs/Learn%20APIs/Security&AuthREST.md)
