@@ -10,7 +10,7 @@ https://httpbin.org/
  website and click on HTTP Methods. A menu with different HTTP methods will expand which you can add to your endpoints.
 
 ``` 
-![alt text](/Learn_APIs/Learn%20APIs//Learn_APIs/Learn%20APIs/Images/image.png)
+![alt text](/Learn_APIs/Learn%20APIs/Images/image.png)
 
 - Step 1:
 In Insomnia, click on the + icon on the left-hand side of the screen and select HTTP Request from the drop-down menu.
