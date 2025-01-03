@@ -16,4 +16,7 @@ Application Programming Interface
 
 [ Insomnia API Tool Guide ](Learn_APIs/Learn%20APIs/Insomnia_guide.md)
 
+[Rest API Best Practices ](/Learn_APIs/Learn%20APIs/RESTbestPractices.md)
+
 [ Security and Authentication in REST API](Learn_APIs/Learn%20APIs/Security&AuthREST.md)
+
