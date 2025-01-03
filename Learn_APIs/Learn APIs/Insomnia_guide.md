@@ -10,7 +10,7 @@ https://httpbin.org/
  website and click on HTTP Methods. A menu with different HTTP methods will expand which you can add to your endpoints.
 
 ``` 
-![alt text](/Learn_APIs/Learn%20APIs/image.png)
+![alt text](/Learn_APIs/Learn%20APIs//Learn_APIs/Learn%20APIs/Images/image.png)
 
 - Step 1:
 In Insomnia, click on the + icon on the left-hand side of the screen and select HTTP Request from the drop-down menu.
@@ -67,21 +67,21 @@ You can Filter your output using the Filter response body at the section in the 
 ```
 Filter functionality in Insomnia
 
-![alt text](image-1.png)
+![alt text](/Learn_APIs/Learn%20APIs/Images/image-1.png)
 ```
 - Add the following filter inside it: $.origin
 
 It should update the Preview. The output will appear similar to what is displayed in the screenshot below.
 ```
-![alt text](image-2.png)
+![alt text](/Learn_APIs/Learn%20APIs/Images/image-2.png)
 
 - Step 7: 
 Modify the filter incrementally as below which should produce the respective outputs.
 ```
  $.headers
 ```
-![alt text](image-3.png)
-![alt text](image-4.png)
+![alt text](/Learn_APIs/Learn%20APIs/Images/image-3.png)
+![alt text](/Learn_APIs/Learn%20APIs/Images/image-4.png)
 
 ```
 $.headers.Content-Type
@@ -120,12 +120,12 @@ https://httpbin.org/post
 
 Notice that the contents of the form are updated inside the output for the POST request. 
 
-![alt text](image-5.png)
+![alt text](/Learn_APIs/Learn%20APIs/Images/image-5.png)
 
 - Step 2:
 Explore the other tabs under the output such as Headers, Cookies and Timeline.
 
-![alt text](image-6.png)
+![alt text](/Learn_APIs/Learn%20APIs/Images/image-6.png)
 
 Step 3:      
 Since you have modified the same HTTP request, update the changes for the title of the request in the left-hand section to POST request using Insomnia.
@@ -159,7 +159,7 @@ JSON is an option under the text input section in the dropdown menu of the Body 
 
 A text input area should appear as below.
 ```
-![alt text](image-7.png)
+![alt text](/Learn_APIs/Learn%20APIs/Images/image-7.png)
 
 
 Step 4:
