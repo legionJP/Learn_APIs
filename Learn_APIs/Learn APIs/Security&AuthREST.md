@@ -12,14 +12,14 @@
 
 3. Data Integrity : SSL ensures that the data sent and received is not altered during transit
 ```
-![alt text](<Screenshot 2025-01-04 035927.png>)
+![alt text](<Images/Screenshot 2025-01-04 035927.png>)
 
 # 2. Signed URLs
 - Signed URLs give someone limited access to a specific resource for a brief period of time. 
 
-![alt text](<Screenshot 2025-01-04 035945.png>)
+![alt text](<Images/Screenshot 2025-01-04 035945.png>)
 
-![alt text](<Screenshot 2025-01-04 040018.png>)
+![alt text](<Images/Screenshot 2025-01-04 040018.png>)
 
 ```
 A signed URL contains authentication information in its query string. This information is typically generated using a private key (Signature) associated with a service or third Parties account. 
@@ -38,14 +38,14 @@ Hash Function: + Secret Key ====> Message Integrity and Message Authentication
 
 - Message Authentication: HMAC is generated using a secret key known only to the sender and receiver, it verifies that the message truly came from the sender.
 ```
-![alt text](<Screenshot 2025-01-04 040115.png>)
+![alt text](<Images/Screenshot 2025-01-04 040115.png>)
 
 # 4. Token Based Authentication 
-![alt text](<Screenshot 2025-01-04 040132.png>)
+![alt text](<Images/Screenshot 2025-01-04 040132.png>)
 
-![alt text](<Screenshot 2025-01-04 040151.png>)
+![alt text](<Images/Screenshot 2025-01-04 040151.png>)
 
-![alt text](<Screenshot 2025-01-04 040223.png>)
+![alt text](<Images/Screenshot 2025-01-04 040223.png>)
 
 ```
 Wprking of Token Based Authnatication
@@ -68,7 +68,7 @@ API Keys: Simple tokens used to identify and authenticate an application making 
 ~~~
 
 # 5.  CORS (Cross- Origin Resource Sharing)
-![alt text](<Screenshot 2025-01-04 040349.png>)
+![alt text](<Images/Screenshot 2025-01-04 040349.png>)
 ~~~
 It is a security feature implemented in web browsers to allow or restrict web pages from making requests to other domains.
 
@@ -82,8 +82,8 @@ when a web application hosted on one domain needs to access resources or APIs ho
 
 # 6. HTTP  Codes 
 
-![alt text](<Screenshot 2025-01-04 040257.png>)
-![alt text](<Screenshot 2025-01-04 040309.png>)
+![alt text](<Images/Screenshot 2025-01-04 040257.png>)
+![alt text](<Images/Screenshot 2025-01-04 040309.png>)
 
 # 7. Firewall Application On Server 
 ```
