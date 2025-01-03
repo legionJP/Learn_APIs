@@ -48,7 +48,7 @@ Hash Function: + Secret Key ====> Message Integrity and Message Authentication
 ![alt text](<Images/Screenshot 2025-01-04 040223.png>)
 
 ```
-Wprking of Token Based Authnatication
+Working of Token Based Authnatication
 
 1. User Login 
 2. Token Generation : 
