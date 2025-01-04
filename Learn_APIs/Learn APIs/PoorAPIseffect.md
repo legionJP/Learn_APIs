@@ -16,7 +16,8 @@ Creating a high-quality API project can be challenging. Adherence to standards, 
 
 # Fix: 
 ```
-Add proper security checks in your code and create a solid authorization layer to prevent unauthorized access to your data. Always double-check these sensitive API endpoints before deploying them to production.   
+Add proper security checks in your code and create a solid authorization layer to prevent unauthorized access to your data.
+Always double-check these sensitive API endpoints before deploying them to production.   
 ```
 # 2. Data corruption
 
@@ -66,7 +67,8 @@ To avoid this, always send proper caching headers with your API responses and im
 
 # Fix: 
 ```
-To avoid this, always follow the proper naming convention and implement data filtering, searching, sorting, searching and pagination features for your API endpoints. Always keep proper error checking in the code and write tests so that it doesn’t create unexpected 5XX errors on the server side.
+To avoid this, always follow the proper naming convention and implement data filtering, searching, sorting, searching and pagination features for your API endpoints.
+ Always keep proper error checking in the code and write tests so that it doesn’t create unexpected 5XX errors on the server side.
 
 ```
 
@@ -84,5 +86,6 @@ To avoid this, always follow the proper naming convention and implement data fil
 
 # Fix:
 ```
-Distribute the features and functionalities to multiple smaller Django apps in a decoupled way. Additionally, put some business logic in the models which can be reused by the other parts of your API project. 
+Distribute the features and functionalities to multiple smaller Django apps in a decoupled way. Additionally,
+put some business logic in the models which can be reused by the other parts of your API project. 
 ```
