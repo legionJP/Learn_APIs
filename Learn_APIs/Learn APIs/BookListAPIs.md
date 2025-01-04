@@ -12,10 +12,10 @@
 # 1.  API Features or scope
 - 1. 
 
-![alt text](image-4.png)
+![alt text](BookListImages/image-4.png)
 
 - 2.
- ![alt text](image-5.png)
+ ![alt text](BookListImages/image-5.png)
 
 #### To Store the data : 
 1. Table in db
@@ -35,26 +35,26 @@
 
 ### Result for the single book which contain multiple fields 
 
-![alt text](image-6.png)
+![alt text](BookListImages/image-6.png)
 
 # 4.  Response 
 
 #### Successful  Request 
-![alt text](image-7.png)
+![alt text](BookListImages/image-7.png)
 
 #### Handle the missing field 
-![alt text](image-8.png)
+![alt text](BookListImages/image-8.png)
 
 # 5. JSON Response
 
 ### Converting the Single Model Response into JSON form 
 
-![alt text](image-9.png)
+![alt text](BookListImages/image-9.png)
 
 
 # 6 Edit and Delete the books
 
-![alt text](image-10.png)
+![alt text](BooksListImages/image-10.png)
 
 #### create the URL Pattern in Django to delete and create
 ```
@@ -72,7 +72,7 @@ Data (Payload) is passed in the HTTP request in the :
 2. Form URL encoding string 
 
 ```
-![alt text](image-12.png)
+![alt text](BookListImages/image-12.png)
 
 # 7. Query Dict 
 
@@ -80,4 +80,4 @@ Data (Payload) is passed in the HTTP request in the :
 ```
 To access individual data elements from a JSON response, you use the QueryDict class from the Django.http module which will parse the request body to a Python dictionary.
 ```
-![alt text](image-13.png)
+![alt text](BookListImages/image-13.png)
