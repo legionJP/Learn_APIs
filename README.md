@@ -30,4 +30,4 @@ Application Programming Interface
 
     - [ Organizing an API Project ](Learn_APIs/Learn%20APIs/OrganizingBookListAPI.md)
     
-    - [Consequences of Poor API Desinging/Creation ](Learn_APIs/Learn%20APIs/PoorAPIseffect.md)
+    - [Consequences of Poor API Designing/Creation ](Learn_APIs/Learn%20APIs/PoorAPIseffect.md)
