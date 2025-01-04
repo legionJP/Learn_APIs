@@ -1,5 +1,5 @@
 #
-# Consequences of a poorly designed API
+## Consequences of a poorly designed API
 
 ```
 Creating a high-quality API project can be challenging. Adherence to standards, implementing error handling, conducting security audits, and optimizing performance are crucial. Neglecting these steps can lead to inconsistencies, vulnerabilities, poor performance, and user dissatisfaction. Proper planning and execution are essential to ensure the effectiveness and reliability of your APIs.
