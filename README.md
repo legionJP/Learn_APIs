@@ -35,4 +35,5 @@ Application Programming Interface
     - [XML and JSON Response and Differences ](Learn_APIs/Learn%20APIs/XML_JSON_response.md)
 
 4.  [ Debugging APIs]()
-    - [API Debugging]()
+    - [API Debugging](/Learn_APIs/Learn%20APIs/DebuggingAPI.md)
+    - [Mock APIs ](/Learn_APIs/Learn_APIs/Learn%20APIs/DebuggingAPI.md)
