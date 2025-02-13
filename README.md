@@ -33,3 +33,6 @@ Application Programming Interface
     - [Consequences of Poor API Designing/Creation ](Learn_APIs/Learn%20APIs/PoorAPIseffect.md)
     
     - [XML and JSON Response and Differences ](Learn_APIs/Learn%20APIs/XML_JSON_response.md)
+
+4.  [ Debugging APIs]()
+    - [API Debugging]()

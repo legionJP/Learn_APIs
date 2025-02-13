@@ -6,5 +6,5 @@ from . import views
 # ]
 urlpatterns= [
     path('api/', views.books),
-    path('api/books',views.books),
+    # path('books',views.books),
 ]
