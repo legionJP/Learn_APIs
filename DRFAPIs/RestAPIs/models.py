@@ -5,7 +5,7 @@ from django.db import models
 class Book(models.Model):
     title = models.CharField(primary_key=True,max_length=255)
     author = models.CharField(max_length=255)
-    price = models.DecimalField(max_digits=5, decimal_places=2)
+    price = models.DecimalField(max_digits=5, decimal_places=3)
 
     class Meta:
         indexes = [models.Index(fields=['price'])]
