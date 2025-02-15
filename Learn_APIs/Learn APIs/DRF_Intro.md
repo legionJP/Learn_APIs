@@ -25,6 +25,16 @@ Data types like JSON, XML needs be deal using the DRF
 # Full support for all the HTTP methods
 # Serializers : 
     - Data conversion Conversion of non-ORM Objects
+# Support the Modern Authentication System, 
+    - No need to build the Authentication Layer
 
 ```
-## Serializer Process
+## Serialization Process
+
+- Built-in serializers to help with data conversion between models.
+- Converting the Data into differnt Data types 
+![alt text](image-5.png)
+
+# Deserialization Process
+Serializers can also perform deserialization which converts request data and connects back to the existing models.
+![alt text](image-6.png)
