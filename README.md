@@ -41,3 +41,8 @@ Application Programming Interface
 5. [Django REST framework (DRF)]()
     - [Intro to DRF](/Learn_APIs/Learn_APIs/Learn%20APIs/DRF_Intro.md)
     - [Installing and setting up DRF ](/Learn_APIs/Learn_APIs/Learn%20APIs/Setting_up_DRF.md)
+
+6. [DRF API APP]()
+    - [Books DRF API](DRFAPIs/BookListAPI/)
+    - [Better APi view with Decorators](DRFAPIs/BookListAPI/views.py)
+    - [Different Types of Routing in DRF ](DRFAPIs/BookListAPI/BookListDocs/routing_DRF.md)
