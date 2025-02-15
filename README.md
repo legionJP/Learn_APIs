@@ -40,3 +40,4 @@ Application Programming Interface
 
 5. [Django REST framework (DRF)]()
     - [Intro to DRF](/Learn_APIs/Learn_APIs/Learn%20APIs/DRF_Intro.md)
+    - [Installing and setting up DRF ](/Learn_APIs/Learn_APIs/Learn%20APIs/Setting_up_DRF.md)
