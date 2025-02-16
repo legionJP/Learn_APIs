@@ -42,8 +42,10 @@
     - [Intro to DRF](/Learn_APIs/Learn_APIs/Learn%20APIs/DRF_Intro.md)
     - [Installing and setting up DRF ](/Learn_APIs/Learn_APIs/Learn%20APIs/Setting_up_DRF.md)
 
-6. [DRF API APP]()
+6. [DRF API APP (BookListAPI)](DRFAPIs/BookListAPI/)
+
     - [Books DRF API](DRFAPIs/BookListAPI/)
     - [Better APi view with Decorators](DRFAPIs/BookListAPI/views.py)
     - [Different Types of Routing in DRF ](DRFAPIs/BookListAPI/BookListDocs/routing_DRF.md)
     - [Generic views and ViewSets in DRF](DRFAPIs/BookListAPI/BookListDocs/genricviews_viewsets.md)
+    - [Function and class based views ](DRFAPIs/BookListAPI/BookListDocs/function_class_views.md)
