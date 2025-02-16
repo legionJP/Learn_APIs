@@ -46,3 +46,4 @@
     - [Books DRF API](DRFAPIs/BookListAPI/)
     - [Better APi view with Decorators](DRFAPIs/BookListAPI/views.py)
     - [Different Types of Routing in DRF ](DRFAPIs/BookListAPI/BookListDocs/routing_DRF.md)
+    - [Generic views and ViewSets in DRF](DRFAPIs/BookListAPI/BookListDocs/genricviews_viewsets.md)
