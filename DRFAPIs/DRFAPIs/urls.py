@@ -22,5 +22,6 @@ urlpatterns = [
     path('api/', include('BookListAPI.urls')),
     #path('api/', include('RestAPIs.urls')),
     path('', include('RestAPIs.urls')),
+    path('__debug__', include('debug_toolbar.urls')),
 ]
 
