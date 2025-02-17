@@ -51,7 +51,7 @@
     - [Function and class based views ](DRFAPIs/BookListAPI/BookListDocs/function_class_views.md)
 7. [Django Debug toolbar](DRFAPIs/BookListAPI/BookListDocs/django_debug_tool.md)
 
-8. [Restaurant API Project with DRF ](DRF_RestroAPI/)
+8. [Restaurant API Project using Serializers ](DRF_RestroAPI/)
     - [Restaurant API Project Docs](DRF_RestroAPI/RestroAPIDocs/LemonAPI.md)
     - [Lemon api Models](DRF_RestroAPI/LemonRestro/LemonAPI/models.py)
     - [Lemon API Serializers](DRF_RestroAPI/LemonRestro/LemonAPI/serializers.py)
