@@ -4,6 +4,7 @@
 # 1. Using the pipenv 
 ```
 1. pipenv (Python Packaging Tool)
+pipenv install (will install Pipenv environment)
 pipenv install <package>
 pipenv shell
 
@@ -31,3 +32,4 @@ Combines the features of pip and venv for easier management of Python environmen
 # Install Rest Framework : 
     - pipenv install djangorestframework
     # Or pip3 install djangorestframework
+
