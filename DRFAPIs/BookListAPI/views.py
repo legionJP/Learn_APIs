@@ -54,3 +54,4 @@ class Book(APIView):
     
     def put(self, request, pk):
         return Response({"title": request.data.get('title')}, status=status.HTTP_200_OK)
+    
