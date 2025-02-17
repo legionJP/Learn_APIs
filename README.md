@@ -49,3 +49,4 @@
     - [Different Types of Routing in DRF ](DRFAPIs/BookListAPI/BookListDocs/routing_DRF.md)
     - [Generic views and ViewSets in DRF](DRFAPIs/BookListAPI/BookListDocs/genricviews_viewsets.md)
     - [Function and class based views ](DRFAPIs/BookListAPI/BookListDocs/function_class_views.md)
+7. [Django Debug toolbar](DRFAPIs/BookListAPI/BookListDocs/django_debug_tool.md)
