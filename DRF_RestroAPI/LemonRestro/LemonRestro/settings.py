@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'LemonAPI.apps.LemonapiConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -73,12 +75,26 @@ WSGI_APPLICATION = 'LemonRestro.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+
 DATABASES = {
-    'default': {
+    'default':
+    {
+        'ENGINE' : 'django.db.backends.postgresql',
+        'NAME' :   'DRFAPIDB',
+        'USER' : 'jp',
+        'PASSWORD' : 'ThisisMyDB@23',
+        'HOST' : '127.0.0.1',
+        'PORT' : '5432'
+
+
+    },
+
+     'sqlite3': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    },
 }
+
 
 
 # Password validation
