@@ -58,3 +58,10 @@
     - [Lemon API genrics views ](DRF_RestroAPI/LemonRestro/LemonAPI/views.py)
     - [Lemon API urls mapping](DRF_RestroAPI/LemonRestro/LemonAPI/urls.py)
     - [Lemon API Project url mapping](DRF_RestroAPI/LemonRestro/LemonRestro/urls.py)
+
+9.  [Additional Resources]()
+    - https://django-debug-toolbar.readthedocs.io/en/latest/
+    - https://django-debug-toolbar.readthedocs.io/en/latest/
+    - https://www.django-rest-framework.org/api-guide/routers/
+    - https://django-debug-toolbar.readthedocs.io/en/latest/
+    - https://github.com/django-commons/django-debug-toolbar
