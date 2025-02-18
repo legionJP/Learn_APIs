@@ -68,7 +68,9 @@
 
 10. [Serializers]()
     - [Use cases of Serializers in DRF](DRF_RestroAPI/RestroAPIDocs/serializers.md)
-    - [Seralizers for class based views and decorator views](DRF_RestroAPI/LemonRestro/LemonAPI/serializers.py)
+    - [Seralizers for class, decorator views to get single or multi records](DRF_RestroAPI/LemonRestro/LemonAPI/serializers.py)
     - [class and function views](DRF_RestroAPI/LemonRestro/LemonAPI/views.py)
     - [Mapping of the Views](DRF_RestroAPI/LemonRestro/LemonAPI/urls.py)
 
+10. 2 [Model Serializers]()
+    - [Model serialzers for ]

@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 from rest_framework import generics
 from .models import MenuItem
-from .serializers import MenuItemSerializer, MenuItemSerializer1
+from .serializers import MenuItemSerializer, MenuItemSerializer1, MenuItemSerializer2
 # Create your views here.
 
 # using the genric view 
@@ -32,4 +32,11 @@ def menu_items(request):
 def single_menu_item(request, id):
     item = MenuItem.objects.get(pk=id)
     serialized_item = MenuItemSerializer1(item)
+    return Response(serialized_item.data)
+
+# Model Serializer
+@api_view()
+def single_menu_item1(request, id):
+    item = MenuItem.objects.get(pk=id)
+    serialized_item = MenuItemSerializer2(item)
     return Response(serialized_item.data)
