@@ -65,3 +65,6 @@
     - https://www.django-rest-framework.org/api-guide/routers/
     - https://django-debug-toolbar.readthedocs.io/en/latest/
     - https://github.com/django-commons/django-debug-toolbar
+
+10. [Serializers]()
+    - [Use cases of Serializers in DRF](DRF_RestroAPI/RestroAPIDocs/serializers.md)
