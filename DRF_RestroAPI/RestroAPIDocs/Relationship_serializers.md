@@ -4,6 +4,7 @@
 # Relationship Serializers
 
 - convert the related model into json and display them correctly.
+- making the object of one serializer in another and then adding in the meta filed 
 
 ```
 ![alt text](image-5.png)
