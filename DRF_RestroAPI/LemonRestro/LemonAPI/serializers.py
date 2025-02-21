@@ -4,7 +4,7 @@ from unittest.util import _MAX_LENGTH
 from rest_framework import serializers
 
 # from Learn_APIs.DRF_RestroAPI.LemonRestro.LemonAPI.views import menu_items
-from .models import MenuItem
+from .models import MenuItem , Category
 
 # serializers  for class based views
 
@@ -29,10 +29,12 @@ class MenuItemSerializer2(serializers.ModelSerializer):
     stock = serializers.IntegerField(source='inventory')
     # after method add filed 
     total_price = serializers.SerializerMethodField(method_name='calculate_tax')
+    category=serializers.StringRelatedField()
     class Meta:
         model = MenuItem
         fields = ['id', 'title', 'price', 'stock', 'total_price','category']
 
     def calculate_tax(self, product:MenuItem):
-        return product.price * Decimal(1.1)
+        return product.price * Decimal('1.1')
+    
     

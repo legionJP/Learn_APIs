@@ -36,6 +36,18 @@ def single_menu_item(request, id):
 
 # Model Serializer
 @api_view()
+def menu_items1(request):
+    # items= MenuItem.objects.all()
+    items = MenuItem.objects.select_related('category').all()
+    serialized_items = MenuItemSerializer2(items, many=True) # to covert the all the items to json 
+    # return Response(items.values()) # for models without serializer
+    return Response(serialized_items.data)
+'''
+Changing your view files to load the related model in a single SQL call will make your API more efficient by
+not running a separate SQL query for every item to load the related data.
+'''
+
+@api_view()
 def single_menu_item1(request, id):
     item = MenuItem.objects.get(pk=id)
     serialized_item = MenuItemSerializer2(item)
