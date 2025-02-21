@@ -31,7 +31,7 @@ class MenuItemSerializer2(serializers.ModelSerializer):
     total_price = serializers.SerializerMethodField(method_name='calculate_tax')
     class Meta:
         model = MenuItem
-        fields = ['id', 'title', 'price', 'stock', 'total_price']
+        fields = ['id', 'title', 'price', 'stock', 'total_price','category']
 
     def calculate_tax(self, product:MenuItem):
         return product.price * Decimal(1.1)
