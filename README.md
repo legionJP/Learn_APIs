@@ -88,9 +88,7 @@
 12. [Renderers](DRF_RestroAPI/RestroAPIDocs/Renderers.md)
 
 -  [Different types of renderers]()
-        - [JSON, BrowseableAPI, XML renders](DRF_RestroAPI/RestroAPIDocs/Renderers.md)
-   
+         - [JSON, BrowseableAPI, XML renders](DRF_RestroAPI/RestroAPIDocs/Renderers.md)
         - [TemplateHTMLRenderer](DRF_RestroAPI/RestroAPIDocs/others_type_renderers.md)
-   
-        - [StaticHTMLRenderer](DRF_RestroAPI/RestroAPIDocs/others_type_renderers.md)
+         - [StaticHTMLRenderer](DRF_RestroAPI/RestroAPIDocs/others_type_renderers.md)
 
