@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 
 from rest_framework import generics
 from .models import MenuItem
@@ -33,15 +33,18 @@ def single_menu_item(request, id):
     item = MenuItem.objects.get(pk=id)
     serialized_item = MenuItemSerializer1(item)
     return Response(serialized_item.data)
-
+#----------------------------------------------------------------------------------------------#
 # Model Serializer
+#----------------------------------------------------------------------------------------------#
+
 @api_view()
 def menu_items1(request):
     # items= MenuItem.objects.all()
     items = MenuItem.objects.select_related('category').all()
-    serialized_items = MenuItemSerializer2(items, many=True) # to covert the all the items to json 
-    # return Response(items.values()) # for models without serializer
-    return Response(serialized_items.data)
+    #serialized_items = MenuItemSerializer2(items, many=True) 
+    serialized_items = MenuItemSerializer2(items, many=True, context={'request':request}) # for the hyperlinkedrelatedfield
+    return Response(serialized_items.data)     # return Response(items.values()) # for models without serializer to covert the all the items to json
+
 '''
 Changing your view files to load the related model in a single SQL call will make your API more efficient by
 not running a separate SQL query for every item to load the related data.
@@ -52,3 +55,16 @@ def single_menu_item1(request, id):
     item = MenuItem.objects.get(pk=id)
     serialized_item = MenuItemSerializer2(item)
     return Response(serialized_item.data)
+
+# Using the HyperlinkedRelatedField , view for category_detail
+from . serializers import CategorySerializer 
+from .models import Category
+
+@api_view()
+def category_detail(request , pk):
+    category = get_object_or_404(Category, pk=pk)
+    serialized_category = CategorySerializer(category)
+    return Response(serialized_category.data)
+
+# map in the urls.py
+

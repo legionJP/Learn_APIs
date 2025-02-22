@@ -67,7 +67,7 @@ Thus you have to create a new function in the views.py file that will handle the
 from .models import Category from .serializers import CategorySerializer
 @api_view()
 def category_detail(request, pk):
-    category = get_object_or_404(Category,pk=pk)
+    category = get_object_or_404(Category,pk=pk)V
     serialized_category = CategorySerializer(category)
     return Response(serialized_category.data) 
 ```
