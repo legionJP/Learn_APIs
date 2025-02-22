@@ -82,3 +82,8 @@
     - [ModelHyperLinkRelated Serializer](DRF_RestroAPI/LemonRestro/LemonAPI/serializers.py)
 
 11. [Deserialization and Validation](DRF_RestroAPI/RestroAPIDocs/Deserialization_Validation.md)
+    - [serializers file](DRF_RestroAPI/LemonRestro/LemonAPI/serializers.py)
+    - [views](DRF_RestroAPI/LemonRestro/LemonAPI/views.py)
+
+12. [Renderers](DRF_RestroAPI/RestroAPIDocs/Renderers.md)
+    - []()

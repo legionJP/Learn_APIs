@@ -4,8 +4,9 @@ from rest_framework import generics
 from .models import MenuItem
 from .serializers import MenuItemSerializer, MenuItemSerializer1, MenuItemSerializer2
 # Create your views here.
-
+#---------------------------------------------------------------------------------------------------#
 # using the genric view 
+#---------------------------------------------------------------------------------------------------#
 class MenuItemView(generics.ListCreateAPIView):
     queryset = MenuItem.objects.all()
     serializer_class = MenuItemSerializer
@@ -14,8 +15,9 @@ class MenuItemView(generics.ListCreateAPIView):
 class SingleMenuItemView(generics.RetrieveUpdateAPIView, generics.DestroyAPIView):
     queryset= MenuItem.objects.all()
     serializer_class = MenuItemSerializer
-
+#---------------------------------------------------------------------------------------------------#
 # Using the api_view decorator
+#---------------------------------------------------------------------------------------------------#
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
@@ -34,6 +36,8 @@ def single_menu_item(request, id):
     item = MenuItem.objects.get(pk=id)
     serialized_item = MenuItemSerializer1(item)
     return Response(serialized_item.data)
+
+
 #----------------------------------------------------------------------------------------------#
 # Model Serializer
 #----------------------------------------------------------------------------------------------#
@@ -68,13 +72,13 @@ def category_detail(request , pk):
     category = get_object_or_404(Category, pk=pk)
     serialized_category = CategorySerializer(category)
     return Response(serialized_category.data)
-
 # map it in the urls.py
 
+# ---------------------------------------------------------------------------------------------------#
 # Views  For Deserialization and Validation
+#---------------------------------------------------------------------------------------------------#
 # Deserialization is the process of converting the JSON data into a Django object.
 # Validation is the process of checking if the data is valid or not.
-
 
 @api_view(['GET', 'POST'])
 def menu_items1(request):

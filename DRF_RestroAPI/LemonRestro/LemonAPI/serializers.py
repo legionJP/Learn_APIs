@@ -6,8 +6,9 @@ from rest_framework import serializers
 # from Learn_APIs.DRF_RestroAPI.LemonRestro.LemonAPI.views import menu_items
 from .models import MenuItem , Category
 
+#---------------------------------------------------------------------------------------------------#
 # serializers  for class based views
-
+#---------------------------------------------------------------------------------------------------#
 class MenuItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = MenuItem
@@ -21,10 +22,9 @@ class MenuItemSerializer1(serializers.ModelSerializer):
         model = MenuItem
         fields = ['id', 'title', 'price']
 
-
-# Model Serializer for function based views
-
-# for @api_view() decorator
+#---------------------------------------------------------------------------------------------------#
+# Model Serializer for function based views , for @api_view() decorator
+#---------------------------------------------------------------------------------------------------#
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
@@ -39,21 +39,24 @@ class MenuItemSerializer2(serializers.ModelSerializer):
     # after method add field
     total_price = serializers.SerializerMethodField(method_name='calculate_tax')
 
+#-------------------------------------------------------------------------------#
 # for string related filed
     # category=serializers.StringRelatedField()
     # directly using 
     #category = CategorySerializer()
 
-# # for the HyperlinkRelatedField:
+#-------------------------------------------------------------------------------#
+ # for the HyperlinkRelatedField:
+#-------------------------------------------------------------------------------#
 #     category = serializers.HyperlinkedRelatedField(
 #         queryset = Category.objects.all(),
 #         view_name = 'category-detail'
 #     ) # add the context in the menu-items function
-
+#-------------------------------------------------------------------------------#
 # for Deserilization 
     category = CategorySerializer(read_only = True)
     category_id = serializers.IntegerField(write_only=True)
-    #category_id = serializers.PrimaryKeyRelatedField(queryset=Category.objects.all(), write_only=True)
+#-------------------------------------------------------------------------------#
 
     class Meta:
         model = MenuItem
@@ -63,7 +66,6 @@ class MenuItemSerializer2(serializers.ModelSerializer):
     def calculate_tax(self, product:MenuItem):
         return product.price * Decimal('1.1')
     
-
 #-------------------------------------------------------------------------------#
 # MenuItemSerializer extends the serializers.HyperlinkedModelSerializer class instead 
 #-------------------------------------------------------------------------------#
