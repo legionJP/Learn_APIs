@@ -178,3 +178,8 @@ class MenuItemSerializer(serializers.ModelSerializer):
         }
 
 ```
+
+# Addition Resources
+https://jpadilla.github.io/django-rest-framework-xml/
+https://jpadilla.github.io/django-rest-framework-yaml/
+https://jpadilla.github.io/django-rest-framework-jsonp/
