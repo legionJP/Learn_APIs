@@ -80,7 +80,12 @@ def category_detail(request , pk):
 # Deserialization is the process of converting the JSON data into a Django object.
 # Validation is the process of checking if the data is valid or not.
 
+from rest_framework_csv.renderers import CSVRenderer
+from rest_framework.decorators import renderer_classes
+
 @api_view(['GET', 'POST'])
+# @renderer_classes([CSVRenderer]) #for the csv renderer 
+
 def menu_items1(request):
     if request.method == 'GET':
         items = MenuItem.objects.select_related('category').all()
@@ -103,7 +108,7 @@ def menu_items1(request):
 # Views  HTML Template render 
 #---------------------------------------------------------------------------------------------------#
 
-from rest_framework.renderers import TemplateHTMLRenderer
+from rest_framework.renderers import TemplateHTMLRenderer 
 from rest_framework.decorators import renderer_classes
 
 @api_view()
@@ -113,3 +118,14 @@ def menu(request):
     serialized_items = MenuItemSerializer2(items, many=True)
     return Response({'items': serialized_items.data}, template_name='menu.html')
 # ---------------------------------------------------------------------------------------------------#
+
+# ---------------------------------------------------------------------------------------------------#
+# Views  for Static HTML Template render
+#---------------------------------------------------------------------------------------------------#
+from rest_framework.renderers import  StaticHTMLRenderer
+
+@api_view(['GET'])
+@renderer_classes([StaticHTMLRenderer])
+def welcome(request):
+    data ='<html><body><h1><center>Welcome to Lemon Restro </center></h1></body></html>'
+    return Response(data)

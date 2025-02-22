@@ -8,6 +8,7 @@ djangorestframework = "*"
 psycopg2 = "*"
 django = "*"
 djangorestframework-xml = "*"
+djangorestframework-csv = "*"
 
 [dev-packages]
 
