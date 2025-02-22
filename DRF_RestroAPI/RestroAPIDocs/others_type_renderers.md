@@ -161,3 +161,20 @@ Now the client can send the following Accept headers to receive the API output i
 |----------------|------------------------------|              
 |CSV             |     Accept: text/csv         |
 |YAML            |    Accept: application/yaml  |
+
+
+# using the extra key word values using the serializers for the price and inven field limits
+```python
+from rest_framework import serializers
+from .models import MenuItem 
+
+class MenuItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MenuItem
+        fields = ['id','title','price','inventory']
+        extra_kwargs = {
+            'price': {'min_value': 2},
+            'inventory':{'min_value':0}
+        }
+
+```
