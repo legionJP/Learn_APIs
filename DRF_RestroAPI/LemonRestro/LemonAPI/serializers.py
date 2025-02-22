@@ -44,15 +44,20 @@ class MenuItemSerializer2(serializers.ModelSerializer):
     # directly using 
     #category = CategorySerializer()
 
-# for the HyperlinkRelatedField:
-    category = serializers.HyperlinkedRelatedField(
-        queryset = Category.objects.all(),
-        view_name = 'category-detail'
-    ) # add the context in the menu-items function
+# # for the HyperlinkRelatedField:
+#     category = serializers.HyperlinkedRelatedField(
+#         queryset = Category.objects.all(),
+#         view_name = 'category-detail'
+#     ) # add the context in the menu-items function
+
+# for Deserilization 
+    category = CategorySerializer(read_only = True)
+    category_id = serializers.IntegerField(write_only=True)
+    #category_id = serializers.PrimaryKeyRelatedField(queryset=Category.objects.all(), write_only=True)
 
     class Meta:
         model = MenuItem
-        fields = ['id', 'title', 'price', 'stock', 'total_price','category']
+        fields = ['id', 'title', 'price', 'stock', 'total_price','category', 'category_id']
         # depth=1
 
     def calculate_tax(self, product:MenuItem):

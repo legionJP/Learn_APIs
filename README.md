@@ -73,8 +73,12 @@
     - [Mapping of the Views](DRF_RestroAPI/LemonRestro/LemonAPI/urls.py)
 
 - 10. 2 [Model Serializers]()
-    - [Model serialzers for changing the name of filed , adding new method filed](DRF_RestroAPI/LemonRestro/LemonAPI/models.py)
+    - [Model serialzers for changing the name of filed , adding new method field](DRF_RestroAPI/LemonRestro/LemonAPI/models.py)
 
 - 10. 3 [Relationship Serializers](DRF_RestroAPI/RestroAPIDocs/Relationship_serializers.md)
 
 - 10. 4 [Others Types of Serailizers](DRF_RestroAPI/RestroAPIDocs/others_type_serializers.md)
+    - [HyperLinkRelated Filed in Serializers](DRF_RestroAPI/LemonRestro/LemonAPI/serializers.py)
+    - [ModelHyperLinkRelated Serializer](DRF_RestroAPI/LemonRestro/LemonAPI/serializers.py)
+
+11. [Deserialization and Validation](DRF_RestroAPI/RestroAPIDocs/Deserialization_Validation.md)
