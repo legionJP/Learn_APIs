@@ -41,11 +41,12 @@ class MenuItemSerializer2(serializers.ModelSerializer):
 
     # category=serializers.StringRelatedField()
     # directly using 
-    category = CategorySerializer()
+    #category = CategorySerializer()
 
     class Meta:
         model = MenuItem
         fields = ['id', 'title', 'price', 'stock', 'total_price','category']
+        depth=1
 
     def calculate_tax(self, product:MenuItem):
         return product.price * Decimal('1.1')
