@@ -98,4 +98,18 @@ def menu_items1(request):
         serialized_items.save()
         return Response(serialized_items.data, status.HTTP_201_CREATED)
 
-    
+
+# ---------------------------------------------------------------------------------------------------#
+# Views  HTML Template render 
+#---------------------------------------------------------------------------------------------------#
+
+from rest_framework.renderers import TemplateHTMLRenderer
+from rest_framework.decorators import renderer_classes
+
+@api_view()
+@renderer_classes([TemplateHTMLRenderer])
+def menu(request):
+    items = MenuItem.objects.select_related('category').all()
+    serialized_items = MenuItemSerializer2(items, many=True)
+    return Response({'items': serialized_items.data}, template_name='menu.html')
+# ---------------------------------------------------------------------------------------------------#

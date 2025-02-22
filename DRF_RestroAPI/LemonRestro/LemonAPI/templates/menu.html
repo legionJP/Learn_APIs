@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table {
+            border-width: 1000px;
+            text-align: left;
+            border-collapse: collapse;
+
+        }
+        th, td{
+            border: 1px solid rgb(0, 0, 0);
+            padding: 8px;
+        }
+        th{
+            background-color: #0ac260;
+        }
+        td{
+            background-color: burlywood;
+        }
+        
+    </style>
+    <table width ="100%" >
+        <tr>
+            <th>title</th>
+            <th>price</th>
+            <th>price after tax</th>
+            <th>stock</th>
+            <th>category</th>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td>{{item.title}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.total_price}}</td>
+            <td>{{item.stock}}</td>
+            <td>{{item.category.title}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
