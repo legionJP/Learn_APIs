@@ -163,7 +163,8 @@ Now the client can send the following Accept headers to receive the API output i
 |YAML            |    Accept: application/yaml  |
 
 
-# using the extra key word values using the serializers for the price and inven field limits
+# using the extra key word values using the serializers for the price and ineven field limits
+
 ```python
 from rest_framework import serializers
 from .models import MenuItem 
@@ -183,3 +184,4 @@ class MenuItemSerializer(serializers.ModelSerializer):
 https://jpadilla.github.io/django-rest-framework-xml/
 https://jpadilla.github.io/django-rest-framework-yaml/
 https://jpadilla.github.io/django-rest-framework-jsonp/
+
