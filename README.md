@@ -90,3 +90,6 @@
          - [JSON, BrowseableAPI, XML renders](DRF_RestroAPI/RestroAPIDocs/Renderers.md)
          - [TemplateHTMLRenderer](DRF_RestroAPI/RestroAPIDocs/others_type_renderers.md)
          - [StaticHTMLRenderer](DRF_RestroAPI/RestroAPIDocs/others_type_renderers.md)
+
+13. [Filtering , Ordering and  Searching](DRF_RestroAPI/RestroAPIDocs/filtering_searching.md)
+    - []()
