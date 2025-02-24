@@ -95,12 +95,18 @@ def menu_items1(request):
         catgeory_name = request.query_params.get('category')
         to_price = request.query_params.get('max_price')
         search = request.query_params.get('search')
+        ordering = request.query_params.get('ordering')
         if catgeory_name:
             items = items.filter(category__title=catgeory_name)
         if to_price:
             items = items.filter(price__lte=to_price) #  price_lte ==> less than or equal to price
         if search:
             items = items.filter(title__icontains=search) # title_icontains ==> case insensitive search
+        if ordering:
+            ordering_fields = ordering.split(',')
+            #items = items.order_by(ordering)
+            items = items.order_by(*ordering_fields) # for multiple ordering fields
+
         #------------------------------------------------------------------#
         serialized_items = MenuItemSerializer2(items, many=True) # to covert the all the items to json 
         # return Response(items.values()) # for models without serializer
