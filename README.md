@@ -84,6 +84,8 @@
 11. [Deserialization and Validation](DRF_RestroAPI/RestroAPIDocs/Deserialization_Validation.md)
     - [serializers file](DRF_RestroAPI/LemonRestro/LemonAPI/serializers.py)
     - [views](DRF_RestroAPI/LemonRestro/LemonAPI/views.py)
+   #### 1. [Importance Of Data Validation](DRF_RestroAPI/RestroAPIDocs/API_Data_Validation.md)
+   #### 2. [Data Sanitization](DRF_RestroAPI/RestroAPIDocs/API_Data_Sanitization.md)
 
 12. [Renderers](DRF_RestroAPI/RestroAPIDocs/Renderers.md)
 - Different types of renderers
