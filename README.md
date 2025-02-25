@@ -97,3 +97,5 @@
 
 14. [Pagination](DRF_RestroAPI/RestroAPIDocs/pagination.md)
     - [ModelViewSet Filtering and Pagination](DRF_RestroAPI/RestroAPIDocs/filtering_Pagination.md)
+
+15. [Caching](DRF_RestroAPI/RestroAPIDocs/Caching.md)
