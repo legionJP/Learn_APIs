@@ -9,6 +9,7 @@ psycopg2 = "*"
 django = "*"
 djangorestframework-xml = "*"
 djangorestframework-csv = "*"
+bleach = "*"
 
 [dev-packages]
 

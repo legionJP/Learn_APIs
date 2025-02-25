@@ -113,18 +113,21 @@ def menu_items1(request):
         return Response(serialized_items.data)
     elif request.method == 'POST':
         serialized_items = MenuItemSerializer2(data=request.data)
+        #------------------------------------------------------------------#
+        # data validation
+        
         # if serialized_items.is_valid():
         #     serialized_items.save()
         #     return Response(serialized_items.data, status.HTTP_201_CREATED)
         # return Response(serialized_items.errors, status.HTTP_400_BAD_REQUEST)
-
+    # OR
         serialized_items.is_valid(raise_exception=True)
         serialized_items.save()
         return Response(serialized_items.data, status.HTTP_201_CREATED)
 
 
 # ---------------------------------------------------------------------------------------------------#
-# Views  HTML Template render 
+# Views:   HTML Template render 
 #---------------------------------------------------------------------------------------------------#
 
 from rest_framework.renderers import TemplateHTMLRenderer 

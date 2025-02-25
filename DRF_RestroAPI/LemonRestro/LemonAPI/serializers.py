@@ -2,6 +2,8 @@ from dataclasses import fields
 from decimal import Decimal
 from unittest.util import _MAX_LENGTH
 from rest_framework import serializers
+from rest_framework.validators import UniqueValidator , UniqueTogetherValidator
+import bleach
 
 # from Learn_APIs.DRF_RestroAPI.LemonRestro.LemonAPI.views import menu_items
 from .models import MenuItem , Category
@@ -14,6 +16,7 @@ class MenuItemSerializer(serializers.ModelSerializer):
         model = MenuItem
         fields = ['id', 'title', 'price', 'inventory']
         
+
 
 class MenuItemSerializer1(serializers.ModelSerializer):
     id = serializers.IntegerField()
@@ -31,7 +34,8 @@ class CategorySerializer(serializers.ModelSerializer):
         model = Category
         fields = ['id', 'slug','title']
 
-# for menu items @pi_view() decorator
+###------------------------------------------------------------------------###
+# for menu items @api_view() decorator
 
 class MenuItemSerializer2(serializers.ModelSerializer):
     #  change the name of the field
@@ -46,7 +50,7 @@ class MenuItemSerializer2(serializers.ModelSerializer):
     #category = CategorySerializer()
 
 #-------------------------------------------------------------------------------#
- # for the HyperlinkRelatedField:
+# for the HyperlinkRelatedField:
 #-------------------------------------------------------------------------------#
 #     category = serializers.HyperlinkedRelatedField(
 #         queryset = Category.objects.all(),
@@ -58,10 +62,48 @@ class MenuItemSerializer2(serializers.ModelSerializer):
     category_id = serializers.IntegerField(write_only=True)
 #-------------------------------------------------------------------------------#
 
+# # Method:3 Using validate_field() method 
+
+#     def validate_price(self, value):
+#         if value < Decimal('10'):
+#             raise serializers.ValidationError('The Price Must be at least $10')
+    
+#     def validate_stock(self, value):
+#         if value <0:
+#             raise serializers.ValidationError('The Stock Must be at least 0')
+        
+# Method 4 : Using the validate() method
+    def vlaidate(self, attrs):
+        if attrs['price'] < Decimal('10'):
+            raise serializers.ValidationError('The Price Must be at least $10')
+        if attrs['stock'] <0:
+            raise serializers.ValidationError('The Stock Must be at least 0')
+
+
     class Meta:
         model = MenuItem
         fields = ['id', 'title', 'price', 'stock', 'total_price','category', 'category_id']
-        # depth=1
+        # depth=1  # for the nested serializer
+
+# API Data Validation:
+    #Method:1. Using the Keyword Arguments in the Meta class
+        # extra_kwargs = {
+        #     'price': {'min_value': Decimal('10')},
+        #     'stock' : {'source':'inventory', 'min_value':0}
+        # }
+# #1.1 UniqueValidator using the extra_kwargs
+#         extra_kwargs= {
+#             'title':{
+#                 'validators':[UniqueValidator(queryset=MenuItem.objects.all())]
+#             }
+#         }
+#     # Or using above the meta class 
+#     # title = serializers.CharField(validators=[UniqueValidator(queryset=MenuItem.objects.all()),message='Ttile Must be Unique'])
+# #1.2 UniqueTogetherValidator
+#     validators = [UniqueTogetherValidator(
+#                         queryset=MenuItem.objects.all(), 
+#                         fields=['title','price']),
+#                 ]
 
     def calculate_tax(self, product:MenuItem):
         return product.price * Decimal('1.1')
