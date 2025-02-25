@@ -12,5 +12,9 @@ urlpatterns = [
     path('category/<int:pk>', views.category_detail, name='category-detail'),
     path('menu', views.menu),
     path('welcome', views.welcome),
+    # path for the filtering and pagination MenuItemViewSet
+    path('menu-itemsV/', views.MenuItemViewSet.as_view(({'get':'list'}))),
+    path('menu-itemsV/<int:pk>/', views.MenuItemViewSet.as_view(({'get':'retrieve'}
+    ))),
 
 ]

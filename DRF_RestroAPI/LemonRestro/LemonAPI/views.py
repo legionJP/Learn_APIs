@@ -1,10 +1,12 @@
 from queue import Empty
+from re import search
 from django.core.paginator import EmptyPage
 from django.shortcuts import get_object_or_404, render
 
 from rest_framework import generics
 from .models import MenuItem
 from .serializers import MenuItemSerializer, MenuItemSerializer1, MenuItemSerializer2
+
 # Create your views here.
 #---------------------------------------------------------------------------------------------------#
 # using the genric view 
@@ -176,3 +178,19 @@ from rest_framework.renderers import  StaticHTMLRenderer
 def welcome(request):
     data ='<html><body><h1><center>Welcome to Lemon Restro </center></h1></body></html>'
     return Response(data)
+
+
+
+# ---------------------------------------------------------------------------------------------------#
+# Views for the Filerting and Pagination using the DjangoFilterBackend and OrderingFilter, ModelViewSet
+#---------------------------------------------------------------------------------------------------#
+
+from rest_framework.response import Response
+from rest_framework import viewsets
+from rest_framework.filters import OrderingFilter, SearchFilter
+class MenuItemViewSet(viewsets.ModelViewSet):
+    queryset = MenuItem.objects.all()
+    serializer_class = MenuItemSerializer2
+    ordering_fields = ['price', 'inventory'] # specify the fields for ordering other than the default ordering fields
+    search_fields = ['title']
+    filter_fields = ['category']

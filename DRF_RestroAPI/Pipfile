@@ -10,6 +10,7 @@ django = "*"
 djangorestframework-xml = "*"
 djangorestframework-csv = "*"
 bleach = "*"
+django-filter = "*"
 
 [dev-packages]
 
