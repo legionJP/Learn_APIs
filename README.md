@@ -96,3 +96,4 @@
     #### 2. [Data Sanitization](DRF_RestroAPI/RestroAPIDocs/API_Data_Sanitization.md)
 
 14. [Pagination](DRF_RestroAPI/RestroAPIDocs/pagination.md)
+    - [ModelViewSet Filtering and Pagination](DRF_RestroAPI/RestroAPIDocs/filtering_Pagination.md)
