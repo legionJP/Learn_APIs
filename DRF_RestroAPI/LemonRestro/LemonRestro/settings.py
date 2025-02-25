@@ -81,7 +81,8 @@ DATABASES = {
     {
         'ENGINE' : 'django.db.backends.postgresql',
         'NAME' :   'DRFAPIDB',
-        'USER' : 'postgres',
+        # 'USER' : 'postgres',
+        'USER' : 'jp',
         'PASSWORD' : 'ThisisMyDB@23',
         'HOST' : '127.0.0.1',
         'PORT' : '5432'
@@ -142,8 +143,8 @@ REST_FRAMEWORK = {
     [
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',
-        'rest_framework_xml.renderers.XMLRenderer',
-        'rest_framework_csv.renderers.CSVRenderer', 
+        # 'rest_framework_xml.renderers.XMLRenderer',
+        # 'rest_framework_csv.renderers.CSVRenderer', 
         # 'rest_framework_yaml.renderers.YAMLRenderer', 
 
     ]
