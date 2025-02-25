@@ -62,6 +62,24 @@ class MenuItemSerializer2(serializers.ModelSerializer):
     category_id = serializers.IntegerField(write_only=True)
 #-------------------------------------------------------------------------------#
 
+#-------------------------------------------------------------------------------#
+# Using the Bleach for validate_field
+#-------------------------------------------------------------------------------#
+    def validate_title(self, value):
+        return bleach.clean(value)
+#     # Using the validate() method  
+#     def validate(self,attrs):
+#         attrs['price'] =bleach.clean(attrs['price'])
+#         if(attrs['price'])<Decimal('10'):
+#             raise serializers.ValidationError("The Price Must be at least $10")
+# # the bleach can  be used to validate the below fileds for sql injection
+#         attrs['title'] = bleach.clean(attrs['title'])
+#         attrs['price'] = bleach.clean(attrs['price'])
+# # limit = request.GET.get('limit')
+# # MenuItem.objects.raw('SELECT * FROM LittleLemonAPI_menuitem LIMIT %s', [limit])
+
+#-------------------------------------------------------------------------------#
+
 # # Method:3 Using validate_field() method 
 
 #     def validate_price(self, value):
@@ -71,7 +89,9 @@ class MenuItemSerializer2(serializers.ModelSerializer):
 #     def validate_stock(self, value):
 #         if value <0:
 #             raise serializers.ValidationError('The Stock Must be at least 0')
-        
+   
+
+    
 # Method 4 : Using the validate() method
     def vlaidate(self, attrs):
         if attrs['price'] < Decimal('10'):
