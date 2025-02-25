@@ -95,4 +95,4 @@
     #### 1. [Importance Of Data Validation](DRF_RestroAPI/RestroAPIDocs/API_Data_Validation.md)
     #### 2. [Data Sanitization](DRF_RestroAPI/RestroAPIDocs/API_Data_Sanitization.md)
 
-14. 
+14. [Pagination](DRF_RestroAPI/RestroAPIDocs/pagination.md)

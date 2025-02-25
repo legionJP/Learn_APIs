@@ -1,3 +1,5 @@
+from queue import Empty
+from django.core.paginator import EmptyPage
 from django.shortcuts import get_object_or_404, render
 
 from rest_framework import generics
@@ -81,6 +83,7 @@ def category_detail(request , pk):
 # Validation is the process of checking if the data is valid or not.
 
 from rest_framework_csv.renderers import CSVRenderer
+from django.core.paginator import Paginator
 from rest_framework.decorators import renderer_classes
 
 @api_view(['GET', 'POST'])
@@ -96,6 +99,11 @@ def menu_items1(request):
         to_price = request.query_params.get('max_price')
         search = request.query_params.get('search')
         ordering = request.query_params.get('ordering')
+#------------------------------------------------------------------#
+    # Query param for the pagination records
+        page = request.query_params.get('page', default=1)
+        perpage = request.query_params.get('per_page',default=2)
+#------------------------------------------------------------------#
         if catgeory_name:
             items = items.filter(category__title=catgeory_name)
         if to_price:
@@ -106,8 +114,14 @@ def menu_items1(request):
             ordering_fields = ordering.split(',')
             #items = items.order_by(ordering)
             items = items.order_by(*ordering_fields) # for multiple ordering fields
-
-        #------------------------------------------------------------------#
+#------------------------------------------------------------------#
+        # Initializing the Paginator object
+        paginator = Paginator(items, per_page=perpage)
+        try:
+            items = paginator.page(number=page)
+        except EmptyPage:
+            items =[]
+#------------------------------------------------------------------#
         serialized_items = MenuItemSerializer2(items, many=True) # to covert the all the items to json 
         # return Response(items.values()) # for models without serializer
         return Response(serialized_items.data)
