@@ -99,3 +99,6 @@
     - [ModelViewSet Filtering and Pagination](DRF_RestroAPI/RestroAPIDocs/filtering_Pagination.md)
 
 15. [Caching](DRF_RestroAPI/RestroAPIDocs/Caching.md)
+
+16. [Scuring APIs in DRF]()
+    - [Token Based Authentication](DRF_RestroAPI/RestroAPIDocs/DRFAPI_auth.md)

@@ -45,3 +45,8 @@
 - during this caching the client decides to do one of the below thing
 ![alt text](image-25.png)
 
+
+# Additional Resources:
+https://docs.djangoproject.com/en/4.1/topics/security/
+https://memcached.org/
+https://redis.io/
