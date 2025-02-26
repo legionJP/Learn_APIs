@@ -1,7 +1,7 @@
 # Learn_APIs
 
 ~~~markdown
-# Application Programming Interface
+Application Programming Interface
 ~~~
 
 1. [Introduction to APIs and it's tools]()
@@ -113,3 +113,9 @@
 
 21. [LAB Excercise MenuRating Project](Lab/LittleLemon/)
     - [Lab Guide](Lab/Docks/LabGuide.md)
+
+22. [Additional Resources]()
+   -  https://github.com/jazzband/djangorestframework-simplejwt
+   - https://djoser.readthedocs.io/en/latest/
+   - https://django-rest-framework-simplejwt.readthedocs.io/en/latest/
+   
