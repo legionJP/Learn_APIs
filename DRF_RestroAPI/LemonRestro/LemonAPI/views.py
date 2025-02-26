@@ -194,3 +194,16 @@ class MenuItemViewSet(viewsets.ModelViewSet):
     ordering_fields = ['price', 'inventory'] # specify the fields for ordering other than the default ordering fields
     search_fields = ['title']
     filter_fields = ['category']
+
+
+# ---------------------------------------------------------------------------------------------------#
+# Views for the API auth token genration
+# ---------------------------------------------------------------------------------------------------#
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.decorators import permission_classes
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def secret(request):
+    return Response({'message': 'This is a secret message'}, status=status.HTTP_200_OK)
+

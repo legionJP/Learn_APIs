@@ -1,8 +1,6 @@
 #
 # DRF Security
 
-
-
 # Password Auth
 ![alt text](image-26.png)
 
@@ -21,4 +19,29 @@
 
 - create the superuser
     - python manage.py createsuperuser
+
+# Add the token for the user 
     
+http://127.0.0.1:8000/admin/authtoken/tokenproxy/
+
+# Use of the Token for secure API
+
+
+- Header for the authentication
+Authorization: Token adadsddadhq]ewriwrr
+```py
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.decorators import permission_classes
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def secret(request):
+    return Response({'message': 'This is a secret message'}, status=status.HTTP_200_OK)
+```
+
+# Generating the Token for the Users by api end point
+```py
+from rest_framework.authtoken.views import obtain_auth_token
+path('secret/', views.secret),
+    path('api-token-auth/',obtain_auth_token) # api/api-token-auth/
+```
