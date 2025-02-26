@@ -14,11 +14,13 @@ urlpatterns = [
     path('menu', views.menu),
     path('welcome', views.welcome),
     # path for the filtering and pagination MenuItemViewSet
-    path('menu-itemsV/', views.MenuItemViewSet.as_view(({'get':'list'}))),
+    path('menu-itemsV/', views.MenuItemViewSet.as_view(({'get':'list','post':'create'}))),
     path('menu-itemsV/<int:pk>/', views.MenuItemViewSet.as_view(({'get':'retrieve'}
     ))),
 
     path('secret/', views.secret),
     path('api-token-auth/',obtain_auth_token), # api/api-token-auth/
     path('manager-view/', views.manager_view),
+    path('throttle-check/', views.throttle_check),
+    path('throttle-check-auth/', views.throttle_check_auth),
 ]

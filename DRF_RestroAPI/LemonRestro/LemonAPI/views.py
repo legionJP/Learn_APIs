@@ -188,9 +188,22 @@ def welcome(request):
 from rest_framework.response import Response
 from rest_framework import viewsets
 from rest_framework.filters import OrderingFilter, SearchFilter
+
 class MenuItemViewSet(viewsets.ModelViewSet):
     queryset = MenuItem.objects.all()
     serializer_class = MenuItemSerializer2
+    # throttling
+   # from rest_framework.throttling import AnonRateThrottle , UserRateThrottle
+   # throttle_classes = [UserRateThrottle, AnonRateThrottle]
+
+    # condition throttling 
+    def get_throttles(self):
+        if self.action=='create':
+            throttle_classes=[UserRateThrottle] # or use custom TenCallsPerMinute
+        else:
+            throttle_classes=[]
+        return [throttle() for throttle in throttle_classes]
+
     ordering_fields = ['price', 'inventory'] # specify the fields for ordering other than the default ordering fields
     search_fields = ['title']
     filter_fields = ['category']
@@ -212,7 +225,7 @@ def secret(request):
 # manager View: To check the authorization Layer
 # ---------------------------------------------------------------------------------------------------#
 
-@api_view(['GET'])
+@api_view()
 @permission_classes([IsAuthenticated])
 def manager_view(request):
     if request.user.groups.filter(name='Manager').exists():
@@ -220,3 +233,24 @@ def manager_view(request):
     else:
         return Response({'message':'You are not authorizeed'},status=status.HTTP_404_NOT_FOUND)
 
+# ---------------------------------------------------------------------------------------------------#
+# Views for the Throttle Check 
+# ---------------------------------------------------------------------------------------------------#
+from rest_framework.throttling import AnonRateThrottle , UserRateThrottle
+from rest_framework.decorators import throttle_classes
+from .throttles import TenCallsPerMinute
+@api_view()
+@throttle_classes([AnonRateThrottle])
+def throttle_check(request):
+    return Response({'message': "Successful"})
+
+# fro the authenticated user
+@api_view()
+@permission_classes([IsAuthenticated])
+# @throttle_classes([UserRateThrottle])
+@throttle_classes([TenCallsPerMinute]) # custom throttle rate limit
+
+def throttle_check_auth(request):
+    return Response({'message': "Successful"})
+
+# ---------------------------------------------------------------------------------------------------#
