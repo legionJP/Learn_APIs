@@ -108,3 +108,5 @@
 18. [API Throttling](DRF_RestroAPI/RestroAPIDocs/API_throttling.md)
 
 19. [Djoser library for better authentication](DRF_RestroAPI/RestroAPIDocs/DjoserLib.md)
+
+20. [User Account Management](DRF_RestroAPI/RestroAPIDocs/UserAccountManagement.md)
