@@ -102,3 +102,5 @@
 
 16. [Scuring APIs in DRF]()
     - [Token Based Authentication](DRF_RestroAPI/RestroAPIDocs/DRFAPI_auth.md)
+
+17. [User Roles](DRF_RestroAPI/RestroAPIDocs/Users_Roles.md)

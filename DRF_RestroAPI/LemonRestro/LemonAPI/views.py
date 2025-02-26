@@ -207,3 +207,16 @@ from rest_framework.decorators import permission_classes
 def secret(request):
     return Response({'message': 'This is a secret message'}, status=status.HTTP_200_OK)
 
+
+# ---------------------------------------------------------------------------------------------------#
+# manager View: To check the authorization Layer
+# ---------------------------------------------------------------------------------------------------#
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def manager_view(request):
+    if request.user.groups.filter(name='Manager').exists():
+        return Response({'message': 'This is Manager Auth Class'}, status=status.HTTP_200_OK)
+    else:
+        return Response({'message':'You are not authorizeed'},status=status.HTTP_404_NOT_FOUND)
+

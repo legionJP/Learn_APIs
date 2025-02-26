@@ -19,5 +19,6 @@ urlpatterns = [
     ))),
 
     path('secret/', views.secret),
-    path('api-token-auth/',obtain_auth_token) # api/api-token-auth/
+    path('api-token-auth/',obtain_auth_token), # api/api-token-auth/
+    path('manager-view/', views.manager_view),
 ]
