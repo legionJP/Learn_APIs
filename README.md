@@ -111,4 +111,5 @@
 
 20. [User Account Management](DRF_RestroAPI/RestroAPIDocs/UserAccountManagement.md)
 
-21. [LAB Excercise](Lab/Docks/LabGuide.md)
+21. [LAB Excercise MenuRating Project](Lab/LittleLemon/)
+    - [Lab Guide](Lab/Docks/LabGuide.md)
