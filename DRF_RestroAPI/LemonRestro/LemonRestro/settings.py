@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'LemonAPI.apps.LemonapiConfig',
+    'rest_framework.authtoken',
     'rest_framework',
+
 ]
 
 MIDDLEWARE = [
@@ -81,8 +83,8 @@ DATABASES = {
     {
         'ENGINE' : 'django.db.backends.postgresql',
         'NAME' :   'DRFAPIDB',
-        # 'USER' : 'postgres',
-        'USER' : 'jp',
+        'USER' : 'postgres',
+        #'USER' : 'jp',
         'PASSWORD' : 'ThisisMyDB@23',
         'HOST' : '127.0.0.1',
         'PORT' : '5432'
