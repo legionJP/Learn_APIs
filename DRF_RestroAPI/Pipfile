@@ -11,6 +11,7 @@ djangorestframework-xml = "*"
 djangorestframework-csv = "*"
 bleach = "*"
 django-filter = "*"
+djoser = "*"
 
 [dev-packages]
 

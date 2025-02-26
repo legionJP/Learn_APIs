@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'LemonAPI.apps.LemonapiConfig',
     'rest_framework.authtoken',
     'rest_framework',
+    'djoser',
 
 ]
 
@@ -161,6 +162,7 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES':
     [
         'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
     ],
      'DEFAULT_THROTTLE_CLASSES': [
         'rest_framework.throttling.AnonRateThrottle',
@@ -169,7 +171,11 @@ REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_RATES':
     {
         'anon': '5/minute',
-        'user': '10/day',
+        'user': '100/day',
         'ten': '10/minute'
     },
+}
+
+DJOSER = {
+    "USER_ID_FIELD":"username",
 }

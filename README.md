@@ -104,4 +104,7 @@
     - [Token Based Authentication](DRF_RestroAPI/RestroAPIDocs/DRFAPI_auth.md)
 
 17. [User Roles](DRF_RestroAPI/RestroAPIDocs/Users_Roles.md)
+
 18. [API Throttling](DRF_RestroAPI/RestroAPIDocs/API_throttling.md)
+
+19. [Djoser library for better authentication](DRF_RestroAPI/RestroAPIDocs/DjoserLib.md)
