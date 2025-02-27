@@ -39,8 +39,8 @@ Application Programming Interface
     - [Mock APIs ](/Learn_APIs/Learn%20APIs/DebuggingAPI.md)
 
 5. [Django REST framework (DRF)]()
-    - [Intro to DRF](/Learn_APIs/Learn_APIs/Learn%20APIs/DRF_Intro.md)
-    - [Installing and setting up DRF ](/Learn_APIs/Learn_APIs/Learn%20APIs/Setting_up_DRF.md)
+    - [Intro to DRF](/Learn_APIs/Learn%20APIs/DRF_Intro.md)
+    - [Installing and setting up DRF ](/Learn_APIs/Learn%20APIs/Setting_up_DRF.md)
 
 6. [DRF API APP (BookListAPI)](DRFAPIs/BookListAPI/)
 
@@ -118,4 +118,5 @@ Application Programming Interface
    -  https://github.com/jazzband/djangorestframework-simplejwt
    - https://djoser.readthedocs.io/en/latest/
    - https://django-rest-framework-simplejwt.readthedocs.io/en/latest/
-   
+
+
